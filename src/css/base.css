@@ -1,0 +1,54 @@
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   scroll-behavior: smooth;
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+body {
+   --background-color: #c7dbd0;
+   --theme-color: #f8f8f8;
+   
+   --primary-color: #f1f1f1;
+   --secondery-color: #e1e1e1;
+   --tertiary-color: #efefef;
+   
+   --devider-color: #858585;
+   --message-input-color: #ebebeb;
+   --text-icon-color: #575757;
+   --close-btn-color: rgb(255, 107, 107);
+   --opposite-gray-color: #a7a6a6;
+   --msg-me-bg-color: #c6d8ef;
+   --msg-others-bg-color: #e1e1e1;
+   --msg-text-color: #3c3c3c;
+   
+
+   font-family: "Lato", sans-serif;
+   font-weight: 400;
+}
+
+body.dark {
+   --background-color: #c8c7db;
+   --theme-color: #2f2f2f;
+   
+   --primary-color: #1f1f1e;
+   --secondery-color: #393938;
+   --tertiary-color: #434343;
+   
+   --devider-color: #555455;
+   --message-input-color: #555455;
+   --text-icon-color: #e4dcdc;
+   --close-btn-color: rgb(141, 0, 0);
+   --opposite-gray-color: #888888;
+
+   --msg-me-bg-color: #07999a;
+   --msg-others-bg-color: #555455;
+   --msg-text-color: #ffffff;
+}

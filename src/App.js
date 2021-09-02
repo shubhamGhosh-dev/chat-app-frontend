@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Join from "./components/Join";
+import Chat from "./components/Chat";
+import "./css/base.css";
+import "./css/join.css";
+import "./css/chat.css";
+import "./css/modal.css";
+import "./css/addContact.css";
+import useLocalStorage from "./hooks/useLocalStorage";
+import SocketProvider from "./context-providers/SocketProvider";
+import ContactProvider from "./context-providers/ContactProvider";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+   const [user, setUser] = useLocalStorage("user");
+
+   const chat = (
+      <ContactProvider>
+         <Chat user={user} />
+      </ContactProvider>
+   )
+
+   return(
+      <SocketProvider>
+         {user ? chat : <Join setUser={setUser} />}   
+      </SocketProvider>
+   ) 
+};
 
 export default App;

@@ -1,0 +1,43 @@
+.contact{
+    padding: .6rem 4.5rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.contact:hover{
+    background-color: var(--message-input-color);
+}
+
+.contact__avater{
+    height: 4.5rem;
+    width: 4.5rem;
+    object-fit: cover;
+    border-radius: 5rem;
+}
+
+.contact__name{
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--text-icon-color);
+    transition: color .2s;
+}
+
+.contact__chat-id{
+    color: var(--opposite-gray-color);
+    transition: color .2s;
+}
+
+
+/*********************************************/
+/*           Contact Media Query             */
+/*********************************************/
+
+@media (max-width: 1100px){
+    .contact{
+        padding: .6rem 3rem;
+    }
+}

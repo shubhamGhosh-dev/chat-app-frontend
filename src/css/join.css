@@ -1,0 +1,90 @@
+.jion-container {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+
+.join {
+   width: 35rem;
+   height: 45rem;
+   margin: 0 auto;
+   background-color: #c5bff7;
+   text-align: center;
+   border-radius: 10px;
+   position: fixed;
+}
+
+.join-logo {
+   margin-top: 3rem;
+   height: 4rem;
+}
+
+.join span{
+    display: block;
+    width: 85%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: rgb(65, 65, 65);
+    margin-top: 2rem;
+}
+
+.join-form {
+   display: flex;
+   flex-direction: column;
+   margin-top: 8rem;
+   position: relative;
+   bottom: 1rem;
+   border-radius: 4px;
+}
+
+.join label {
+   width: 80%;
+   margin: 0 auto;
+   text-align: left;
+   font-size: 1.5rem;
+   
+}
+
+.name-input,
+.join-submit {
+   width: 80%;
+   height: 4rem;
+   border-radius: 5px;
+   margin: 1rem auto 1rem auto;
+   border: none;
+   background-color: rgb(238, 238, 238);
+}
+
+.join-submit{
+   cursor: pointer;
+}
+
+.name-input {
+   padding: 0 2rem;
+}
+.name-input:focus,
+.join-submit:focus{
+   outline: none;
+}
+
+.name-input::-webkit-outer-spin-button,
+.name-input::-webkit-inner-spin-button{
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+.name-input[type=number] {
+   -moz-appearance: textfield;
+ }
+
+
+.join-submit {
+    cursor: pointer;
+    font-family: 2rem;
+}
+
+.join p{
+   margin-top: 10rem;
+}

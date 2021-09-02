@@ -1,0 +1,325 @@
+.chat{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    transition: background-color 0.5s;
+}
+
+.chat__container{
+    width: 90%;
+    height: 95vh;
+    max-width: 1370px;
+    max-height: 1100px;
+    overflow: hidden;
+    display: flex;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.chat__top-bar{
+    height: 5rem;
+    background-color: var(--tertiary-color);
+    color: var(--text-icon-color);
+    transition: all .2s;
+    display: none;
+}
+
+.chat__top-bar i {
+    padding: 1.5rem 3rem;
+}
+
+/*********************************************/
+/*             For Left Section              */
+/*********************************************/
+.chat__left{
+    width: 24%;  
+    min-width: 237px;
+    height: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid var(--secondery-color);
+    transition: all 0.2s;
+    z-index: 100;
+}
+
+.chat__user-details{
+    height: 20rem;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat__user-img{
+    width: 8.5rem;
+    height: 8.5rem;
+    object-fit: cover;
+    border: 4px solid var(--text-icon-color);
+    border-radius: 50rem;
+    transition: all 0.2s;
+}
+
+.chat__user-name{
+    font-size: 1.8rem;
+    margin-top: .5rem;
+    color: var(--text-icon-color);
+    transition: color 0.2s;
+}
+
+.chat__user-phoneNumber{
+    font-size: 1.4rem;
+    color: var(--opposite-gray-color);
+    transition: color 0.2s;
+}
+
+.chat__right-devider{
+    height: 2px;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: var(--secondery-color);
+    transition: all 0.2s;
+}
+
+.chat__contacts-wrapper{
+    padding-top: 4rem;
+    overflow: hidden;
+    flex-grow: 1;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+.chat__contacts-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+/*********************************************/
+/*             For Right Section             */
+/*********************************************/
+.chat__right{
+    width: 76%;
+    height: 100%;
+}
+
+.chat__right-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.chat__right-not-selected{
+    background-color: var(--theme-color);
+    height: 100%;
+    color: var(--text-icon-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat__right-not-selected img{
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.chat__right-not-selected h1{
+    margin-bottom: 1.5rem;
+}
+
+.chat__right-not-selected-p{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 32rem;
+}
+
+/************** Right Top Section ************/
+
+.chat__right-top{
+    min-height: 6.6rem;
+    background-color: var(--secondery-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    transition: all 0.2s;
+}
+
+.chat__contact-wraper{
+    display: flex;
+    align-items: center;
+}
+
+.chat__contact-img{
+    height: 4.7rem;
+    width: 4.7rem;
+    object-fit: cover;
+    border-radius: 10rem;
+}
+
+.chat__contact-details{
+    margin-left: 2rem;
+}
+
+.chat__contact-name{
+    font-size: 1.7rem;
+    color: var(--text-icon-color);
+    transition: all 0.2s;
+}
+
+.chat__contact-status{
+    font-size: 1.5rem;
+    color: rgb(0, 209, 0);
+}
+
+.chat__theme-button,
+.chat__imogi-btn,
+.chat__send-btn {
+    height: 4rem;
+    width: 4rem;
+    color: var(--text-icon-color);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/******************* right middel Section *******************/
+
+.chat__main-space{
+    margin-top: auto;
+}
+
+.chat__main-section{
+    padding: 1rem 3rem;
+    flex-grow: 1;
+    background-color: var(--tertiary-color);
+    overflow: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+    scrollbar-width: thin;
+}
+
+.chat__main-section::-webkit-scrollbar{
+    width: 6px;
+}
+
+.chat__main-section::-webkit-scrollbar-thumb{
+    background-color: var(--theme-color);
+}
+
+/******************* Right Bottom Section *******************/
+
+.chat__input{
+    padding: 0 2.5rem;
+    min-height: 5rem;
+    background-color: var(--secondery-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.chat__message-input{
+    height: 3.5rem;
+    width: 87%;
+    background-color: var(--message-input-color);
+    border: none;
+    border-radius: 10rem;
+    color: var(--text-icon-color);
+    padding: 0 1.5rem;
+    transition: all 0.2s;
+    margin-right: 1rem;
+}
+
+.chat__message-input:focus{
+    outline: none;
+}
+
+.chat__send-btn,
+.chat__imogi-btn{
+    font-size: 1.2rem;
+}
+
+
+/*********************************************/
+/*             Chat Media Query              */
+/*********************************************/
+
+@media (max-width: 1250px){
+    .chat__container{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 1000px){
+    .chat__main-section{
+        padding: 1rem 1.5rem;
+    }
+
+    .chat__input{
+        padding: 0px 1.5rem;
+    }
+}
+
+@media (max-width: 800px){
+    .chat__top-bar{
+        display: block;
+    }
+
+    .chat__left{
+        position: fixed;
+        left: -30rem;
+        height: calc(100vh - 5rem);
+    }
+
+    .chat__left.active{
+        left: 0;
+    }
+
+    .chat__right{
+        width: 100%;
+        height: calc(100vh - 5rem);
+    }
+
+    .chat__right.chat__right-dim{
+        filter: brightness(.4);
+        transition: all .2s;
+    }
+
+    .chat{
+        height: calc(100vh - 5rem);
+        position: relative;
+    }
+
+    .chat__container{
+        height: calc(100vh - 5rem);
+    }
+
+    .chat__bottom-wrapper{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+    .chat__main-section{
+        margin-bottom: 4.5rem;
+    }
+}
+
+@media (max-width: 400px){
+    html{
+        font-size: 50%;
+    }
+}
+

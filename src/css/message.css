@@ -1,0 +1,47 @@
+.message-box{
+    margin-top: .6rem;
+    display: flex;
+    color: var(--msg-text-color);
+    transition: background-color 0.2s;
+}
+
+.message-right{
+    flex-direction: row-reverse;
+}
+
+.message-wrapper{
+    min-width: 12rem;
+    max-width: 60rem;
+    min-height: 4rem;
+    padding: .5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.message-me{
+    background-color: var(--msg-me-bg-color);
+    border-radius: 1rem 1rem 0px 1rem;
+    transition: background-color 0.2s;
+}
+
+.message-others{
+    background-color: var(--msg-others-bg-color);
+    border-radius: 0px 1rem 1rem 1rem;
+    transition: background-color 0.2s;
+}
+
+.message{
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.message-time{
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    bottom: -1.2rem;
+    right: -1rem;
+}
