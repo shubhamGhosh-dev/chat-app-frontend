@@ -3,6 +3,8 @@ import io from "socket.io-client";
 
 const SocketContext = React.createContext();
 
+const SERVER = "https://bartalap-chat-app.herokuapp.com/"
+
 export function useSocket(){
     return useContext(SocketContext);
 }
@@ -11,7 +13,7 @@ const SocketProvider = ({ children }) => {
     const [socket, setSocket] = useState()
     
     useEffect(() => {
-        var newSocket = io("http://localhost:5000/");
+        var newSocket = io(SERVER);
 
         setSocket(newSocket);
         return () => newSocket.close();
